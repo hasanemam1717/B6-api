@@ -6,14 +6,69 @@
     <title>Batch-6</title>
 </head>
 <body>
+    <!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUNTING PHONE API</title>
+    <!-- tailwind css link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="container mx-auto ">
     <header>
-
+        
     </header>
     <main>
+        <section class="flex justify-around mt-4">
+
+            <input id="searchFild" type="text" placeholder="Search..." class=" bg-gray-200  input input-bordered w-full max-w-xs" />
+            <button onclick="handleSearchButton()" class="btn btn-accent">Search</button>
+            <!-- another button  -->
+            <!-- <input id="searchFild2" type="text" placeholder="Search here" class=" bg-gray-200  input input-bordered w-full max-w-xs" />
+            <button onclick="handleSearchButton2()" class="btn btn-warning">Search</button> -->
+        </section>
+        <section>
+            <!-- loading spiner  -->
+            <div id="loading"  class="text-center my-40 hidden">
+                <span  class=" loading loading-bars loading-lg"></span>
+            </div>
+            <!-- seach result -->
+            <div class="phone-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-4" id="phone-container">
+            </div>
+            <!-- show all button -->
+            <div id="showAllbuttonContainer" class="hidden text-center my-8">
+                <button onclick="handleShowAll()"  class="btn btn-wide ">Show all</button>
+            </div>
+        </section>
+        <!-- show detail modal -->
+            
+          <!-- Open the modal using ID.showModal() method -->
         
+        <dialog id="show_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <h3 id="show-detail-phone-name" class="font-bold text-lg"></h3>
+            <div id="show-detail-container">
+                
+  
+  
+            </div>
+            <div class="modal-action">
+            <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+            </form>
+            </div>
+        </div>
+        </dialog>
     </main>
     <footer>
 
     </footer>
+
+    <script src="./phone.js"></script>
+</body>
+</html>
 </body>
 </html>
